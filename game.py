@@ -756,7 +756,7 @@ class Game:
         # Number of hands played before reshuffling
         self.hand_counter += 1
 
-    # Re-shuffler, configurable
+    # Re-shuffler, configurable.
     def reshuffle(self):
         if (self.hand_counter == self.used_hands) or (len(self.shoe) < 5 * len(self.players)) or self.always_shuffle:
             self.shoe.extend(self.used_deck)
@@ -770,6 +770,7 @@ class Game:
             if any(player.strategy is None for player in self.players[1:]):
                 print("-------Deck reshuffled------\n")
 
+                
 
 
 
